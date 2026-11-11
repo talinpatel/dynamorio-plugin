@@ -1,0 +1,14 @@
+Format: <instr address>,<opcode>
+0xee5c1f9de76c,movz
+0xee5c1f9de770,str
+0xee5c1f9de774,movz
+0xee5c1f9de778,str
+0xee5c1f9de77c,ldr
+0xee5c1f9de780,ldr
+0xee5c1f9de784,add
+0xee5c1f9de788,str
+0xee5c1f9de78c,movz
+0xee5c1f9de790,add
+0xee5c1f9de794,ret
+0xee5c234c2f1c,bl
+0xee5c234db3e0,paciasp

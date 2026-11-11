@@ -62,7 +62,8 @@ static void
 wrap_pre(void *wrapcxt, DR_PARAM_OUT void **user_data);
 static void
 wrap_main(void *wrapcxt, void **user_data);
-
+static void
+wrap_exit(void *wrapcxt, void **user_data);
 /* Each ins_ref_t describes an executed instruction. */
 typedef struct _ins_ref_t {
     app_pc pc;
@@ -109,10 +110,17 @@ static void
 module_load_event(void *drcontext, const module_data_t *mod, bool loaded)
 {
     app_pc f = (app_pc)dr_get_proc_address(mod->handle, "__libc_start_main");
-    if (f == NULL)
-        return;
-    if (!drwrap_wrap(f, wrap_pre, NULL))
+    if (f != NULL){
+        if (!drwrap_wrap(f, wrap_pre, NULL))
+           DR_ASSERT(false);
+    }
+
+    app_pc e = (app_pc)dr_get_proc_address(mod->handle, "exit");
+    if (e == NULL)
+        return; //not an assert false, just don't want to do anything in this case
+    if (!drwrap_wrap(e, wrap_exit, NULL))
         DR_ASSERT(false);
+
     drmgr_unregister_module_load_event(module_load_event);
 }
 
@@ -126,6 +134,12 @@ static void
 wrap_main(void *wrapcxt, void **user_data)
 {
     trace_started = true;
+}
+
+static void
+wrap_exit(void *wrapcxt, void **user_data)
+{
+    trace_started = false;
 }
 
 static void
