@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.14)
+cmake_minimum_required(VERSION 3.14)
+project(first C)
+find_package(DynamoRIO REQUIRED)
+add_library(first SHARED first.c)
+configure_DynamoRIO_client(first)

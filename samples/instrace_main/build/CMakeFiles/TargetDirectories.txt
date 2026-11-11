@@ -1,0 +1,3 @@
+/home/talin/git/dynamorio-plugin/samples/instrace_main/build/CMakeFiles/instrace.dir
+/home/talin/git/dynamorio-plugin/samples/instrace_main/build/CMakeFiles/edit_cache.dir
+/home/talin/git/dynamorio-plugin/samples/instrace_main/build/CMakeFiles/rebuild_cache.dir

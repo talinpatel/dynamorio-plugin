@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/talin/git/dynamorio-plugin/samples/instrace_main/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

@@ -1,0 +1,3 @@
+/home/talin/git/dynamorio-plugin/tutorials/first/CMakeFiles/first.dir
+/home/talin/git/dynamorio-plugin/tutorials/first/CMakeFiles/edit_cache.dir
+/home/talin/git/dynamorio-plugin/tutorials/first/CMakeFiles/rebuild_cache.dir
