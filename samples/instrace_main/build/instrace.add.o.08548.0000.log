@@ -1,0 +1,13 @@
+Format: <instr address>,<opcode>
+0xec83db3de768,sub
+0xec83db3de76c,movz
+0xec83db3de770,str
+0xec83db3de774,movz
+0xec83db3de778,str
+0xec83db3de77c,ldr
+0xec83db3de780,ldr
+0xec83db3de784,add
+0xec83db3de788,str
+0xec83db3de78c,movz
+0xec83db3de790,add
+0xec83db3de794,ret

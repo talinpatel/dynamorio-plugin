@@ -64,6 +64,8 @@ static void
 wrap_main(void *wrapcxt, void **user_data);
 static void
 wrap_exit(void *wrapcxt, void **user_data);
+static void
+wrap_main_post(void *wrapcxt, void *user_data);
 /* Each ins_ref_t describes an executed instruction. */
 typedef struct _ins_ref_t {
     app_pc pc;
@@ -136,19 +138,23 @@ module_load_event(void *drcontext, const module_data_t *mod, bool loaded)
 static void
 wrap_pre(void *wrapcxt, DR_PARAM_OUT void **user_data)
 {
-    drwrap_wrap((app_pc)drwrap_get_arg(wrapcxt, 0), wrap_main, NULL);
+    drwrap_wrap((app_pc)drwrap_get_arg(wrapcxt, 0), wrap_main, wrap_main_post);
+    //we already wrap up exit, but to avoid last instruction bl let's wrap up main's return
+
+    
 }
 
 static void
 wrap_main(void *wrapcxt, void **user_data)
 {
+    //so this function takes higher priority than the instrace one so it can catch first main instruction
+    //but to prevent code from previous bbs being in the buffer and flushed
+    // we just say fuck it and reset the buffer
+    void *drcontext = dr_get_current_drcontext();
+    per_thread_t *data = drmgr_get_tls_field(drcontext, tls_idx);
+    BUF_PTR(data->seg_base) = data->buf_base;
     trace_started = true;
-}
-
-static void
-wrap_exit(void *wrapcxt, void **user_data)
-{
-    trace_started = false;
+    
 }
 
 static void
@@ -175,6 +181,31 @@ instrace(void *drcontext)
         }
     }
     BUF_PTR(data->seg_base) = data->buf_base;
+}
+
+
+//in case we don't hit the end of main, we wrap exit to stop tracing
+//just do not want libc stuff
+static void
+wrap_exit(void *wrapcxt, void **user_data)
+{
+    //call instrace ourselves to flush before we set the flag to false
+    //must do this as we get flag to be set before flush
+    //so that we don't get bbs from before entry at start of main
+    //yes yes its complicated
+
+    void *drcontext = dr_get_current_drcontext();
+    instrace(drcontext);
+    trace_started = false;
+}
+
+
+//this is a post and the exit is a pre callback function
+static void
+wrap_main_post(void *wrapcxt, void *user_data){
+    void *drcontext = dr_get_current_drcontext();
+    instrace(drcontext);
+    trace_started = false;
 }
 
 /* clean_call dumps the memory reference info to the log file */

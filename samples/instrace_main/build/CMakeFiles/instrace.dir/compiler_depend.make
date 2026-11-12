@@ -99,6 +99,143 @@ CMakeFiles/instrace.dir/instrace_main.c.o: /home/talin/git/dynamorio-plugin/samp
   /usr/lib/gcc/aarch64-linux-gnu/15/include/stddef.h \
   /usr/lib/gcc/aarch64-linux-gnu/15/include/syslimits.h
 
+CMakeFiles/instrace.dir/utils.c.o: /home/talin/git/dynamorio-plugin/samples/instrace_main/utils.c \
+  /home/talin/Downloads/DynamoRIO-AArch64-Linux-11.91.20749/ext/include/drx.h \
+  /home/talin/Downloads/DynamoRIO-AArch64-Linux-11.91.20749/include/dr_api.h \
+  /home/talin/Downloads/DynamoRIO-AArch64-Linux-11.91.20749/include/dr_app.h \
+  /home/talin/Downloads/DynamoRIO-AArch64-Linux-11.91.20749/include/dr_config.h \
+  /home/talin/Downloads/DynamoRIO-AArch64-Linux-11.91.20749/include/dr_defines.h \
+  /home/talin/Downloads/DynamoRIO-AArch64-Linux-11.91.20749/include/dr_events.h \
+  /home/talin/Downloads/DynamoRIO-AArch64-Linux-11.91.20749/include/dr_ir_decode.h \
+  /home/talin/Downloads/DynamoRIO-AArch64-Linux-11.91.20749/include/dr_ir_disassemble.h \
+  /home/talin/Downloads/DynamoRIO-AArch64-Linux-11.91.20749/include/dr_ir_encode.h \
+  /home/talin/Downloads/DynamoRIO-AArch64-Linux-11.91.20749/include/dr_ir_instr.h \
+  /home/talin/Downloads/DynamoRIO-AArch64-Linux-11.91.20749/include/dr_ir_instr_inline.h \
+  /home/talin/Downloads/DynamoRIO-AArch64-Linux-11.91.20749/include/dr_ir_instrlist.h \
+  /home/talin/Downloads/DynamoRIO-AArch64-Linux-11.91.20749/include/dr_ir_isa_features.h \
+  /home/talin/Downloads/DynamoRIO-AArch64-Linux-11.91.20749/include/dr_ir_isa_features_aarch64.h \
+  /home/talin/Downloads/DynamoRIO-AArch64-Linux-11.91.20749/include/dr_ir_macros.h \
+  /home/talin/Downloads/DynamoRIO-AArch64-Linux-11.91.20749/include/dr_ir_macros_aarch64.h \
+  /home/talin/Downloads/DynamoRIO-AArch64-Linux-11.91.20749/include/dr_ir_opcodes.h \
+  /home/talin/Downloads/DynamoRIO-AArch64-Linux-11.91.20749/include/dr_ir_opcodes_aarch64.h \
+  /home/talin/Downloads/DynamoRIO-AArch64-Linux-11.91.20749/include/dr_ir_opnd.h \
+  /home/talin/Downloads/DynamoRIO-AArch64-Linux-11.91.20749/include/dr_ir_utils.h \
+  /home/talin/Downloads/DynamoRIO-AArch64-Linux-11.91.20749/include/dr_mcxtx.h \
+  /home/talin/Downloads/DynamoRIO-AArch64-Linux-11.91.20749/include/dr_modules.h \
+  /home/talin/Downloads/DynamoRIO-AArch64-Linux-11.91.20749/include/dr_os_utils.h \
+  /home/talin/Downloads/DynamoRIO-AArch64-Linux-11.91.20749/include/dr_proc.h \
+  /home/talin/Downloads/DynamoRIO-AArch64-Linux-11.91.20749/include/dr_tools.h \
+  /home/talin/Downloads/DynamoRIO-AArch64-Linux-11.91.20749/include/dr_tracedump.h \
+  /home/talin/git/dynamorio-plugin/samples/instrace_main/utils.h \
+  /usr/include/aarch64-linux-gnu/bits/atomic_wide_counter.h \
+  /usr/include/aarch64-linux-gnu/bits/byteswap.h \
+  /usr/include/aarch64-linux-gnu/bits/endian.h \
+  /usr/include/aarch64-linux-gnu/bits/endianness.h \
+  /usr/include/aarch64-linux-gnu/bits/floatn-common.h \
+  /usr/include/aarch64-linux-gnu/bits/floatn.h \
+  /usr/include/aarch64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/aarch64-linux-gnu/bits/local_lim.h \
+  /usr/include/aarch64-linux-gnu/bits/long-double.h \
+  /usr/include/aarch64-linux-gnu/bits/posix1_lim.h \
+  /usr/include/aarch64-linux-gnu/bits/posix2_lim.h \
+  /usr/include/aarch64-linux-gnu/bits/pthread_stack_min-dynamic.h \
+  /usr/include/aarch64-linux-gnu/bits/pthread_stack_min.h \
+  /usr/include/aarch64-linux-gnu/bits/pthreadtypes-arch.h \
+  /usr/include/aarch64-linux-gnu/bits/pthreadtypes.h \
+  /usr/include/aarch64-linux-gnu/bits/select.h \
+  /usr/include/aarch64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/aarch64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/aarch64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/aarch64-linux-gnu/bits/struct_mutex.h \
+  /usr/include/aarch64-linux-gnu/bits/struct_rwlock.h \
+  /usr/include/aarch64-linux-gnu/bits/thread-shared-types.h \
+  /usr/include/aarch64-linux-gnu/bits/time64.h \
+  /usr/include/aarch64-linux-gnu/bits/timesize.h \
+  /usr/include/aarch64-linux-gnu/bits/types.h \
+  /usr/include/aarch64-linux-gnu/bits/types/FILE.h \
+  /usr/include/aarch64-linux-gnu/bits/types/__FILE.h \
+  /usr/include/aarch64-linux-gnu/bits/types/__fpos64_t.h \
+  /usr/include/aarch64-linux-gnu/bits/types/__fpos_t.h \
+  /usr/include/aarch64-linux-gnu/bits/types/__mbstate_t.h \
+  /usr/include/aarch64-linux-gnu/bits/types/__sigset_t.h \
+  /usr/include/aarch64-linux-gnu/bits/types/clock_t.h \
+  /usr/include/aarch64-linux-gnu/bits/types/clockid_t.h \
+  /usr/include/aarch64-linux-gnu/bits/types/cookie_io_functions_t.h \
+  /usr/include/aarch64-linux-gnu/bits/types/once_flag.h \
+  /usr/include/aarch64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/aarch64-linux-gnu/bits/types/struct_FILE.h \
+  /usr/include/aarch64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/aarch64-linux-gnu/bits/types/struct_timeval.h \
+  /usr/include/aarch64-linux-gnu/bits/types/time_t.h \
+  /usr/include/aarch64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/aarch64-linux-gnu/bits/typesizes.h \
+  /usr/include/aarch64-linux-gnu/bits/uintn-identity.h \
+  /usr/include/aarch64-linux-gnu/bits/waitflags.h \
+  /usr/include/aarch64-linux-gnu/bits/waitstatus.h \
+  /usr/include/aarch64-linux-gnu/bits/wordsize.h \
+  /usr/include/aarch64-linux-gnu/gnu/stubs-lp64.h \
+  /usr/include/aarch64-linux-gnu/gnu/stubs.h \
+  /usr/include/aarch64-linux-gnu/sys/cdefs.h \
+  /usr/include/aarch64-linux-gnu/sys/select.h \
+  /usr/include/aarch64-linux-gnu/sys/types.h \
+  /usr/include/alloca.h \
+  /usr/include/endian.h \
+  /usr/include/features-time64.h \
+  /usr/include/features.h \
+  /usr/include/limits.h \
+  /usr/include/linux/limits.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/stdio.h \
+  /usr/include/stdlib.h \
+  /usr/lib/gcc/aarch64-linux-gnu/15/include/limits.h \
+  /usr/lib/gcc/aarch64-linux-gnu/15/include/stdarg.h \
+  /usr/lib/gcc/aarch64-linux-gnu/15/include/stdbool.h \
+  /usr/lib/gcc/aarch64-linux-gnu/15/include/stddef.h \
+  /usr/lib/gcc/aarch64-linux-gnu/15/include/syslimits.h
+
+libinstrace.so: /home/talin/Downloads/DynamoRIO-AArch64-Linux-11.91.20749/ext/lib64/debug/libdrcontainers.a \
+  /home/talin/Downloads/DynamoRIO-AArch64-Linux-11.91.20749/ext/lib64/debug/libdrmgr.so \
+  /home/talin/Downloads/DynamoRIO-AArch64-Linux-11.91.20749/ext/lib64/debug/libdrreg.so \
+  /home/talin/Downloads/DynamoRIO-AArch64-Linux-11.91.20749/ext/lib64/debug/libdrwrap.so \
+  /home/talin/Downloads/DynamoRIO-AArch64-Linux-11.91.20749/ext/lib64/debug/libdrx.so \
+  /home/talin/Downloads/DynamoRIO-AArch64-Linux-11.91.20749/lib64/debug/libdynamorio.so \
+  instrace.ldscript \
+  /lib/ld-linux-aarch64.so.1 \
+  /usr/lib/aarch64-linux-gnu/libc.so.6 \
+  /usr/lib/aarch64-linux-gnu/libc_nonshared.a \
+  /usr/lib/aarch64-linux-gnu/crti.o \
+  /usr/lib/aarch64-linux-gnu/crtn.o \
+  /usr/lib/aarch64-linux-gnu/libc.so \
+  /usr/lib/aarch64-linux-gnu/libgcc_s.so.1 \
+  /usr/lib/gcc/aarch64-linux-gnu/15/crtbeginS.o \
+  /usr/lib/gcc/aarch64-linux-gnu/15/crtendS.o \
+  /usr/lib/gcc/aarch64-linux-gnu/15/libgcc.a \
+  /usr/lib/gcc/aarch64-linux-gnu/15/libgcc_s.so \
+  CMakeFiles/instrace.dir/instrace_main.c.o \
+  CMakeFiles/instrace.dir/utils.c.o
+
+
+CMakeFiles/instrace.dir/utils.c.o:
+
+/usr/lib/gcc/aarch64-linux-gnu/15/crtendS.o:
+
+/usr/lib/gcc/aarch64-linux-gnu/15/libgcc_s.so:
+
+/usr/lib/gcc/aarch64-linux-gnu/15/crtbeginS.o:
+
+/usr/lib/aarch64-linux-gnu/crtn.o:
+
+/usr/lib/aarch64-linux-gnu/crti.o:
+
+/usr/lib/aarch64-linux-gnu/libc_nonshared.a:
+
+/usr/lib/aarch64-linux-gnu/libc.so.6:
+
+/home/talin/Downloads/DynamoRIO-AArch64-Linux-11.91.20749/ext/lib64/debug/libdrwrap.so:
+
+/home/talin/Downloads/DynamoRIO-AArch64-Linux-11.91.20749/ext/include/drx.h:
+
+/home/talin/Downloads/DynamoRIO-AArch64-Linux-11.91.20749/ext/lib64/debug/libdrx.so:
 
 /usr/lib/gcc/aarch64-linux-gnu/15/include/syslimits.h:
 
@@ -112,6 +249,8 @@ CMakeFiles/instrace.dir/instrace_main.c.o: /home/talin/git/dynamorio-plugin/samp
 
 /usr/include/features-time64.h:
 
+/usr/lib/aarch64-linux-gnu/libc.so:
+
 /usr/include/alloca.h:
 
 /usr/include/aarch64-linux-gnu/sys/types.h:
@@ -120,11 +259,15 @@ CMakeFiles/instrace.dir/instrace_main.c.o: /home/talin/git/dynamorio-plugin/samp
 
 /usr/include/aarch64-linux-gnu/gnu/stubs.h:
 
+/lib/ld-linux-aarch64.so.1:
+
 /usr/include/aarch64-linux-gnu/bits/wordsize.h:
 
 /usr/include/aarch64-linux-gnu/bits/waitstatus.h:
 
 /usr/include/aarch64-linux-gnu/bits/waitflags.h:
+
+/home/talin/Downloads/DynamoRIO-AArch64-Linux-11.91.20749/ext/lib64/debug/libdrreg.so:
 
 /usr/include/aarch64-linux-gnu/sys/cdefs.h:
 
@@ -134,7 +277,11 @@ CMakeFiles/instrace.dir/instrace_main.c.o: /home/talin/git/dynamorio-plugin/samp
 
 /usr/include/aarch64-linux-gnu/bits/types/struct_timeval.h:
 
+/usr/lib/aarch64-linux-gnu/libgcc_s.so.1:
+
 /usr/include/aarch64-linux-gnu/bits/types/struct_timespec.h:
+
+/home/talin/git/dynamorio-plugin/samples/instrace_main/utils.c:
 
 /usr/include/aarch64-linux-gnu/bits/types/sigset_t.h:
 
@@ -146,7 +293,13 @@ CMakeFiles/instrace.dir/instrace_main.c.o: /home/talin/git/dynamorio-plugin/samp
 
 /usr/include/aarch64-linux-gnu/bits/types/clock_t.h:
 
+CMakeFiles/instrace.dir/instrace_main.c.o:
+
 /usr/include/aarch64-linux-gnu/bits/types/__sigset_t.h:
+
+instrace.ldscript:
+
+/home/talin/Downloads/DynamoRIO-AArch64-Linux-11.91.20749/ext/lib64/debug/libdrcontainers.a:
 
 /usr/include/linux/limits.h:
 
@@ -155,6 +308,8 @@ CMakeFiles/instrace.dir/instrace_main.c.o: /home/talin/git/dynamorio-plugin/samp
 /home/talin/Downloads/DynamoRIO-AArch64-Linux-11.91.20749/include/dr_ir_macros_aarch64.h:
 
 /usr/include/aarch64-linux-gnu/bits/select.h:
+
+/usr/lib/gcc/aarch64-linux-gnu/15/libgcc.a:
 
 /usr/include/aarch64-linux-gnu/gnu/stubs-lp64.h:
 
@@ -193,6 +348,8 @@ CMakeFiles/instrace.dir/instrace_main.c.o: /home/talin/git/dynamorio-plugin/samp
 /usr/include/aarch64-linux-gnu/bits/typesizes.h:
 
 /home/talin/Downloads/DynamoRIO-AArch64-Linux-11.91.20749/include/dr_config.h:
+
+/home/talin/Downloads/DynamoRIO-AArch64-Linux-11.91.20749/ext/lib64/debug/libdrmgr.so:
 
 /usr/include/aarch64-linux-gnu/bits/types/struct_FILE.h:
 
@@ -257,6 +414,8 @@ CMakeFiles/instrace.dir/instrace_main.c.o: /home/talin/git/dynamorio-plugin/samp
 /usr/include/aarch64-linux-gnu/bits/types/timer_t.h:
 
 /usr/include/aarch64-linux-gnu/bits/posix1_lim.h:
+
+/home/talin/Downloads/DynamoRIO-AArch64-Linux-11.91.20749/lib64/debug/libdynamorio.so:
 
 /usr/include/aarch64-linux-gnu/bits/pthread_stack_min.h:
 
