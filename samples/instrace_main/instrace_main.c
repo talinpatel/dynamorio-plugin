@@ -101,6 +101,15 @@ enum {
 static reg_id_t tls_seg;
 static uint tls_offs;
 static int tls_idx;
+
+drmgr_priority_t priority = {
+      sizeof(priority),
+      "instrace",
+      NULL, 
+      NULL,
+      DRMGR_PRIORITY_INSERT_DRWRAP + 1
+};
+
 #define TLS_SLOT(tls_base, enum_val) (void **)((byte *)(tls_base) + tls_offs + (enum_val))
 #define BUF_PTR(tls_base) *(ins_ref_t **)TLS_SLOT(tls_base, INSTRACE_TLS_OFFS_BUF_PTR)
 
@@ -382,7 +391,7 @@ dr_client_main(client_id_t id, int argc, const char *argv[])
     if (!drmgr_register_thread_init_event(event_thread_init) ||
         !drmgr_register_thread_exit_event(event_thread_exit) ||
         !drmgr_register_bb_instrumentation_event(NULL /*analysis_func*/,
-                                                 event_app_instruction, NULL) ||
+                                                 event_app_instruction, &priority) ||
         !drmgr_register_module_load_event(module_load_event))
         DR_ASSERT(false);
 
